@@ -1,9 +1,6 @@
 # Proyectos – Arquitectura de Computadores I (CE4301)
 
-Este repositorio contiene una colección de proyectos desarrollados como parte del curso  
-**CE4301 – Arquitectura de Computadores I** del Instituto Tecnológico de Costa Rica.  
-
-Cada proyecto aborda distintos niveles de abstracción del hardware, desde programación en ensamblador, diseño de arquitecturas personalizadas, hasta la implementación de sistemas embebidos con microcontroladores.
+Este repositorio contiene una colección de proyectos desarrollados como parte del curso **CE4301 – Arquitectura de Computadores I** del Instituto Tecnológico de Costa Rica.  Cada proyecto aborda distintos niveles de abstracción del hardware, desde programación en ensamblador, diseño de arquitecturas personalizadas, hasta la implementación de sistemas embebidos con microcontroladores.
 
 ---
 
