@@ -1,0 +1,48 @@
+module pipeline_tb;
+
+  logic clk, rst, switchStart;
+  logic [20:0] instruction;  // Definir la señal de instrucción
+  
+  //reg [20:0] A, B;     // Entradas de 21 bits
+  //reg [4:0] sel;       // Selector de operación de 5 bits (opcode)
+  //wire [20:0] C;       // Salida de 21 bits
+  //wire flagZ;  
+
+  pipeline uut(
+    .clk(clk),
+    .rst(rst),
+    .switchStart(switchStart),
+    .instruction(instruction)  // Conectar la instrucción
+  );
+
+  always #5 clk = ~clk;  // Generación del reloj
+
+  initial begin
+    clk = 0;
+    rst = 1;
+    switchStart = 0;
+    instruction = 21'b000110000000100001010;  // Cargar la instrucción de suma
+	 
+	 //A = 21'd5;
+    //B = 21'd10;
+    //sel = 5'b00011;
+	 
+	 //uut.alu(A, B, sel, C, flagZ);
+	 
+    #10 rst = 0;
+    #20 switchStart = 1;
+
+    // Cambio de la instrucción después de un ciclo para evitar complicaciones
+    #40 instruction = 21'b0;
+
+    #300 $finish;
+  end
+
+  initial begin
+    //$monitor("Time: %0t | Instruction: %b", $time, instruction);
+	 $monitor("Time: %0t | PC: %h | ALU Result: %h | Mem Data: %h", $time, uut.opcode_id, uut.instr_15_12, uut.instr_11_8, uut.instr_7_4, uut.instr_3_0);
+  end
+
+endmodule
+
+

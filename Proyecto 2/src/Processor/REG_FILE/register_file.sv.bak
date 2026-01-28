@@ -1,0 +1,34 @@
+module register_file (
+    input logic clk,                  // Reloj del sistema
+    input logic rst,                  // Señal de reset
+    input logic RegWrite,             // Señal de escritura en el registro
+    input logic [3:0] read_reg1,      // Dirección del primer registro de lectura
+    input logic [3:0] read_reg2,      // Dirección del segundo registro de lectura
+    input logic [3:0] write_reg,      // Dirección del registro de escritura
+    input logic [20:0] write_data,    // Dato a escribir en el registro
+    output logic [20:0] read_data1,   // Dato leído del primer registro
+    output logic [20:0] read_data2    // Dato leído del segundo registro
+);
+
+    // Archivo de registros (16 registros de 21 bits cada uno)
+    logic [20:0] registers [15:0];
+
+    // Lectura de los registros
+    assign read_data1 = registers[read_reg1];
+    assign read_data2 = registers[read_reg2];
+
+    // Escritura en el registro (flanco de reloj negativo)
+    always_ff @(negedge clk or posedge rst) begin
+        if (rst) begin
+            // Resetear todos los registros a 0
+            integer i;
+            for (i = 0; i < 16; i = i + 1) begin
+                registers[i] <= 21'd0;
+            end
+        end else if (RegWrite) begin
+            // Escribir en el registro si la señal RegWrite está habilitada
+            registers[write_reg] <= write_data;
+        end
+    end
+
+endmodule

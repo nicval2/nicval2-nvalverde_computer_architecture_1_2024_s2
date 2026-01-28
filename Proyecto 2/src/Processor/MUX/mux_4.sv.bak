@@ -1,0 +1,19 @@
+module mux_4 #(parameter N = 32)(
+                                    input logic [N-1:0] A, B, C, D,
+                                    input logic [1:0] sel,
+                                    output logic [N-1:0] E
+                                );
+
+	always_comb
+		case(sel)
+		
+			
+			2'b00: E = A;
+			2'b01: E = B;
+			2'b10: E = C;
+			2'b11: E = D;
+			
+			default: E = 32'bx; 
+		endcase
+	
+endmodule

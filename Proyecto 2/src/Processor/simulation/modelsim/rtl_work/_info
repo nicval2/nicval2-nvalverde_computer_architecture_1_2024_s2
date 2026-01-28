@@ -1,0 +1,512 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1729662396
+!i10b 1
+!s100 6;6AXaTedhe?RAnRF3_?B3
+IkbEbYYQcUKZ3fKbSdhR:D3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_sv_unit
+S1
+R0
+w1729657003
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ADDER/adder.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ADDER/adder.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1729662396.000000
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ADDER/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ADDER|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ADDER/adder.sv|
+!i113 1
+Z6 o-sv -work work
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ADDER}
+Z7 tCvgOpt 0
+valu
+R1
+R2
+!i10b 1
+!s100 Wi`JJkREYFW9bUj]Jc]YN3
+IIc=Xzo<YdMIgno`NKI1mz0
+R3
+!s105 alu_sv_unit
+S1
+R0
+w1729656975
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ALU/alu.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ALU/alu.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ALU/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ALU|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ALU/alu.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ALU}
+R7
+vcontrol_unit
+R1
+R2
+!i10b 1
+!s100 B;M7<fDS=z_n3ZT4FalJH3
+IoFN6ZE@>0ZGH1bC?eOGmK0
+R3
+!s105 control_unit_sv_unit
+S1
+R0
+w1729657092
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/CONTROL_UNIT/control_unit.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/CONTROL_UNIT/control_unit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/CONTROL_UNIT/control_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/CONTROL_UNIT|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/CONTROL_UNIT/control_unit.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/CONTROL_UNIT}
+R7
+vdmem_ram
+R1
+Z8 !s110 1729662395
+!i10b 1
+!s100 gX@a25KgHS0O]BER1Xe`X1
+IB[Eh^lFlE@bhTA^`HFh<O1
+R3
+!s105 dmem_ram_sv_unit
+S1
+R0
+w1729661882
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_ram.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_ram.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z9 !s108 1729662395.000000
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_ram.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_ram.sv|
+!i113 1
+R6
+Z10 !s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor}
+R7
+vdmem_rom
+R1
+Z11 !s110 1729662398
+!i10b 1
+!s100 n2cEV^IH?Gcb>Q72NGH5A0
+ISC7AOYUjmIS@=Qk;9EB=E2
+R3
+!s105 dmem_rom_sv_unit
+S1
+R0
+w1729661813
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_rom.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_rom.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z12 !s108 1729662398.000000
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_rom.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/dmem_rom.sv|
+!i113 1
+R6
+R10
+R7
+vimem
+R1
+R11
+!i10b 1
+!s100 PIQX7nH2ziNVW^:FJQJVo1
+IC0gTUcMfD7Nji10fDUY6l1
+R3
+!s105 imem_sv_unit
+S1
+R0
+w1729661892
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/imem.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/imem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/imem.sv|
+!i113 1
+R6
+R10
+R7
+vjump_unit
+R1
+Z13 !s110 1729662397
+!i10b 1
+!s100 VfF9FfR>SLcnhI01>70Ac0
+I:1HV_f2DdEd2Km]o0BzZK1
+R3
+!s105 jump_unit_sv_unit
+S1
+R0
+w1729657218
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/JUMP_UNIT/jump_unit.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/JUMP_UNIT/jump_unit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/JUMP_UNIT/jump_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/JUMP_UNIT|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/JUMP_UNIT/jump_unit.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/JUMP_UNIT}
+R7
+vmemoryAccess
+R1
+R11
+!i10b 1
+!s100 NbI]A5>A5SiPR[7a;CZSR2
+IIg372AXo@>oLoB3;Vfl><2
+R3
+!s105 memoryAccess_sv_unit
+S1
+R0
+w1729657436
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryAccess.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryAccess.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryAccess.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryAccess.sv|
+!i113 1
+R6
+R10
+R7
+nmemory@access
+vmemoryController
+R1
+R8
+!i10b 1
+!s100 =50IOjJSiVC32Ve^9Q[hD2
+IA=f<9gd2V8]QeJW4Zk76n3
+R3
+!s105 memoryController_sv_unit
+S1
+R0
+w1729656921
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryController.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryController.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryController.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/memoryController.sv|
+!i113 1
+R6
+R10
+R7
+nmemory@controller
+vmux_2
+R1
+R2
+!i10b 1
+!s100 Y:Id@TH6dc<Pebfa]zg7b2
+IU4BT7o7mj40205[4OFX^12
+R3
+!s105 mux_2_sv_unit
+S1
+R0
+w1729655802
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_2.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_2.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_2.sv|
+!i113 1
+R6
+Z14 !s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX}
+R7
+vmux_4
+R1
+R2
+!i10b 1
+!s100 dHEQhjT`PQa@IK:M96_o00
+I2LbMJ]FNHn^2;cV[OF7LA0
+R3
+!s105 mux_4_sv_unit
+S1
+R0
+w1729655812
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_4.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_4.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/MUX/mux_4.sv|
+!i113 1
+R6
+R14
+R7
+vpc_register
+R1
+R2
+!i10b 1
+!s100 jEG6LK7P3Ec@LGPXX5VTE0
+Ij=3ADHonH_4:FEb8SDD9B0
+R3
+!s105 pc_register_sv_unit
+S1
+R0
+w1729657133
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/PC_REG/pc_register.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/PC_REG/pc_register.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/PC_REG/pc_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/PC_REG|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/PC_REG/pc_register.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/PC_REG}
+R7
+vpipeline
+R1
+R13
+!i10b 1
+!s100 ZaDIkE1YIzOk4`0kC4oUc3
+IURSD[<D:QG5>h4LzGbC0k2
+R3
+!s105 pipeline_sv_unit
+S1
+R0
+w1729657501
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z15 !s108 1729662397.000000
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline.sv|
+!i113 1
+R6
+R10
+R7
+vpipeline_tb
+R1
+R11
+!i10b 1
+!s100 ;>B7l<dghbz7@?oJ2NJB:1
+I?Ib^EhmlcfR`XIc4FB2101
+R3
+!s105 pipeline_tb_sv_unit
+S1
+R0
+w1729651722
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline_tb.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline_tb.sv
+L0 49
+R4
+r1
+!s85 0
+31
+R12
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/pipeline_tb.sv|
+!i113 1
+R6
+R10
+R7
+vregister_file
+R1
+R13
+!i10b 1
+!s100 E[8UWAV=?KJ_TCm2XojSK3
+IK`DT:g=d?gH9M:LRP8ck81
+R3
+!s105 register_file_sv_unit
+S1
+R0
+w1729657413
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/REG_FILE/register_file.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/REG_FILE/register_file.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R15
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/REG_FILE/register_file.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/REG_FILE|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/REG_FILE/register_file.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/REG_FILE}
+R7
+vsegment_ex_mem
+R1
+R2
+!i10b 1
+!s100 PK32RDzRleDO?[OR_G?GN2
+IH]jI2hRoSzZjS8`Z_LA5K0
+R3
+!s105 segment_ex_mem_sv_unit
+S1
+R0
+w1729657354
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_ex_mem.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_ex_mem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_ex_mem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_ex_mem.sv|
+!i113 1
+R6
+Z16 !s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION}
+R7
+vsegment_id_ex
+R1
+R13
+!i10b 1
+!s100 >^ai0V46JmWkIWY8f9@[l2
+I2mU]>BJYBbDb3YUZe;Za90
+R3
+!s105 segment_id_ex_sv_unit
+S1
+R0
+w1729657256
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_id_ex.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_id_ex.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R15
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_id_ex.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_id_ex.sv|
+!i113 1
+R6
+R16
+R7
+vsegment_if_id
+R1
+R13
+!i10b 1
+!s100 ZDne8Z4X:Kml1C@bPXkJk1
+I]7OK<A`Q6Fm=P=8bLN:U70
+R3
+!s105 segment_if_id_sv_unit
+S1
+R0
+w1729657294
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_if_id.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_if_id.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R15
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_if_id.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_if_id.sv|
+!i113 1
+R6
+R16
+R7
+vsegment_mem_wb
+R1
+R13
+!i10b 1
+!s100 [9B^676H>;D7OM8JkmP9U0
+I3JLW?[a=nZk0QBDKaJ]cO2
+R3
+!s105 segment_mem_wb_sv_unit
+S1
+R0
+w1729657329
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_mem_wb.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_mem_wb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R15
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_mem_wb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/SEGMENTATION/segment_mem_wb.sv|
+!i113 1
+R6
+R16
+R7
+vsign_extend
+R1
+R2
+!i10b 1
+!s100 dm0Ae_@<c_XbNJ7Wmf>hf2
+IY2SN?@]TH5<5ih86m>>Oa2
+R3
+!s105 sign_extend_sv_unit
+S1
+R0
+w1729655521
+8D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ID_STAGE/sign_extend.sv
+FD:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ID_STAGE/sign_extend.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ID_STAGE/sign_extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ID_STAGE|D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ID_STAGE/sign_extend.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+D:/.TEC/Arquitectura de Computadores/Jsantamaria_computer_architecture_1_2024_s2/src/Processor/ID_STAGE}
+R7

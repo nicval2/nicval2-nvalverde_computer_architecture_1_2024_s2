@@ -1,0 +1,153 @@
+module control_unit (
+    input [4:0] opcode,         // Opcode de 5 bits de la instrucción
+    input rst,                  // Reset
+    output logic MemToReg,       // Selección entre datos de memoria y ALU
+    output logic MemRead,        // Lectura de memoria
+    output logic MemWrite,       // Escritura en memoria
+    output logic [2:0] ALUOp,    // Operación ALU
+    output logic ALUSrc,         // Selección de fuente ALU (inmediato o registro)
+    output logic RegWrite,       // Escritura en registro
+    output logic Jump,           // Señal de salto
+    output logic BranchEQ,       // Salto condicional (igual)
+    output logic BranchNE        // Salto condicional (no igual)
+);
+
+    always @(*) begin
+        if (rst) begin
+            // Reiniciar todas las señales
+            MemToReg = 0;
+            MemRead = 0;
+            MemWrite = 0;
+            ALUOp = 3'b000;
+            ALUSrc = 0;
+            RegWrite = 0;
+            Jump = 0;
+            BranchEQ = 0;
+            BranchNE = 0;
+        end else begin
+            // Configurar las señales según el opcode
+            case (opcode)
+                // Instrucciones Aritméticas sin inmediato
+                5'b00011: begin // ADD (SM)
+                    ALUOp = 3'b000;    // Operación de suma
+                    ALUSrc = 0;        // Usar registros
+                    RegWrite = 1;      // Escribir en registro
+                    MemToReg = 0;      // Resultado de la ALU
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                5'b00101: begin // SUB (RT)
+                    ALUOp = 3'b001;    // Operación de resta
+                    ALUSrc = 0;        // Usar registros
+                    RegWrite = 1;      // Escribir en registro
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                5'b01001: begin // MUL (MLT)
+                    ALUOp = 3'b010;    // Operación de multiplicación
+                    ALUSrc = 0;        // Usar registros
+                    RegWrite = 1;      // Escribir en registro
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                5'b01010: begin // DIV (DV)
+                    ALUOp = 3'b011;    // Operación de división
+                    ALUSrc = 0;        // Usar registros
+                    RegWrite = 1;      // Escribir en registro
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                
+                // Instrucciones Aritméticas con Inmediato
+                5'b00100: begin // ADDI (SMI)
+                    ALUOp = 3'b000;    // Operación de suma con inmediato
+                    ALUSrc = 1;        // Usar inmediato
+                    RegWrite = 1;      // Escribir en registro
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                5'b00110: begin // SUBI (RTI)
+                    ALUOp = 3'b001;    // Operación de resta con inmediato
+                    ALUSrc = 1;        // Usar inmediato
+                    RegWrite = 1;
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                
+                // Instrucciones de Memoria
+                5'b00000: begin // LOADR (LDR)
+                    ALUOp = 3'b000;    // Cargar no requiere operación aritmética
+                    ALUSrc = 1;        // Usar inmediato para direccionamiento
+                    RegWrite = 1;      // Escribir en registro
+                    MemToReg = 1;      // Cargar desde memoria
+                    MemRead = 1;       // Activar lectura de memoria
+                    MemWrite = 0;      // No escribir en memoria
+                end
+                5'b00001: begin // STOREB (STR)
+                    ALUOp = 3'b000;    // Guardar no requiere operación aritmética
+                    ALUSrc = 1;        // Usar inmediato para direccionamiento
+                    RegWrite = 0;      // No escribir en registro
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 1;      // Activar escritura en memoria
+                end
+                
+                // Instrucciones de Control de Flujo
+                5'b01111: begin // J (B)
+                    ALUOp = 3'b001;    // Instrucción de salto
+                    Jump = 1;          // Activar salto
+                    RegWrite = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                5'b10000: begin // JL (BL)
+                    ALUOp = 3'b001;    // Instrucción de salto con link
+                    Jump = 1;          // Activar salto
+                    RegWrite = 1;      // Guardar el link
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                
+                // Instrucciones de Comparación y Condiciones
+                5'b10001: begin // CMP (CMPI)
+                    ALUOp = 3'b010;    // Comparación (resta)
+                    ALUSrc = 0;        // Usar registros
+                    RegWrite = 0;      // No escribir en registro
+                    MemRead = 0;
+                    MemWrite = 0;
+                end
+                5'b10010: begin // BEQ (JEQ)
+                    BranchEQ = 1;      // Activar salto si es igual
+                    ALUOp = 3'b001;
+                    MemRead = 0;
+                    MemWrite = 0;
+                    RegWrite = 0;
+                end
+                5'b10011: begin // BNE (JNE)
+                    BranchNE = 1;      // Activar salto si no es igual
+                    ALUOp = 3'b001;
+                    MemRead = 0;
+                    MemWrite = 0;
+                    RegWrite = 0;
+                end
+                
+                default: begin // Instrucción no reconocida
+                    MemToReg = 0;
+                    MemRead = 0;
+                    MemWrite = 0;
+                    ALUOp = 3'b000;
+                    ALUSrc = 0;
+                    RegWrite = 0;
+                    Jump = 0;
+                    BranchEQ = 0;
+                    BranchNE = 0;
+                end
+            endcase
+        end
+    end
+endmodule

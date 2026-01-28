@@ -1,0 +1,155 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 22.1std.0 Build 915 10/25/2022 SC Standard Edition
+# Date created = 17:15:23  October 20, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Processor_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY pipeline
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:15:23  OCTOBER 20, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BOARD "DE1-SoC Board"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Adder_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Adder_tb -section_id Adder_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ADDER/adder_tb.sv -section_id Adder_tb
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id alu_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_tb -section_id alu_tb
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH pipeline_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME alu_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME mux_2_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux_2_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux_2_tb -section_id mux_2_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME mux_4_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux_4_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux_4_tb -section_id mux_4_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME control_unit_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id control_unit_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME control_unit_tb -section_id control_unit_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME register_file_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id register_file_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME register_file_tb -section_id register_file_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME pc_register -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id pc_register
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME pc_register -section_id pc_register
+set_global_assignment -name EDA_TEST_BENCH_NAME if_id_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id if_id_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME if_id_tb -section_id if_id_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME mem_wb_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mem_wb_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mem_wb_tb -section_id mem_wb_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME id_ex_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id id_ex_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME id_ex_tb -section_id id_ex_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME ex_mem_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ex_mem_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ex_mem_tb -section_id ex_mem_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME jump_unit_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id jump_unit_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jump_unit_tb -section_id jump_unit_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME sign_extend_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sign_extend_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sign_extend_tb -section_id sign_extend_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE pipeline_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE memoryController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE dmem_rom.sv
+set_global_assignment -name SYSTEMVERILOG_FILE dmem_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_ex_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX/mux_4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX/mux_2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ADDER/adder_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ADDER/adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/alu_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX/mux_4_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX/mux_2_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CONTROL_UNIT/control_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CONTROL_UNIT/control_unit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PC_REG/pc_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PC_REG/pc_register_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ID_STAGE/sign_extend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ID_STAGE/sign_extend_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE JUMP_UNIT/jump_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE JUMP_UNIT/jump_unit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_ex_mem_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_id_ex.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_id_ex_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_if_id.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_if_id_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_mem_wb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEGMENTATION/segment_mem_wb_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE REG_FILE/register_file.sv
+set_global_assignment -name SYSTEMVERILOG_FILE REG_FILE/register_file_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pipeline.sv
+set_global_assignment -name SYSTEMVERILOG_FILE memoryAccess.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME pipeline_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id pipeline_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME pipeline_tb -section_id pipeline_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU/alu_tb.sv -section_id alu_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE MUX/mux_2_tb.sv -section_id mux_2_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE MUX/mux_4_tb.sv -section_id mux_4_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE CONTROL_UNIT/control_unit_tb.sv -section_id control_unit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE REG_FILE/register_file_tb.sv -section_id register_file_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE PC_REG/pc_register_tb.sv -section_id pc_register
+set_global_assignment -name EDA_TEST_BENCH_FILE SEGMENTATION/segment_if_id_tb.sv -section_id if_id_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE SEGMENTATION/segment_mem_wb_tb.sv -section_id mem_wb_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE SEGMENTATION/segment_id_ex_tb.sv -section_id id_ex_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE SEGMENTATION/segment_ex_mem_tb.sv -section_id ex_mem_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE JUMP_UNIT/jump_unit_tb.sv -section_id jump_unit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ID_STAGE/sign_extend_tb.sv -section_id sign_extend_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE pipeline_tb.sv -section_id pipeline_tb
+set_global_assignment -name SYSTEMVERILOG_FILE memoryAccess_tb.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE forwarding_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE hazard_unit.sv

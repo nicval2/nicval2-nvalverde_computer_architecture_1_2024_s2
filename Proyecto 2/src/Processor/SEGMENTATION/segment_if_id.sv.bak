@@ -1,0 +1,36 @@
+module segment_if_id (
+    input logic clk, rst,
+    input logic [20:0] pc_out,          // PC de 21 bits según la arquitectura
+    input logic [20:0] instruction,     // Instrucción de 21 bits
+    output logic [20:0] pc,             // PC
+    output logic [1:0] instr_20_19,     // Bits [20:19] de la instrucción
+    output logic [4:0] instr_18_14,     // Bits [18:14] de la instrucción
+    output logic [3:0] instr_13_10,     // Bits [13:10] de la instrucción
+    output logic [3:0] instr_9_6,       // Bits [9:6] de la instrucción
+    output logic [3:0] instr_5_2,       // Bits [5:2] de la instrucción
+    output logic [1:0] instr_1_0        // Bits [1:0] de la instrucción
+);
+
+    always_ff @(negedge clk or posedge rst) begin
+        if (rst) begin
+            // Reset de todas las señales
+            pc = 21'd0;
+            instr_20_19 = 2'b00;
+            instr_18_14 = 5'b00000;
+            instr_13_10 = 4'b0000;
+            instr_9_6 = 4'b0000;
+            instr_5_2 = 4'b0000;
+            instr_1_0 = 2'b00;
+        end else begin
+            // Capturar el PC y las partes de la instrucción
+            pc = pc_out;
+            instr_20_19 = instruction[20:19];  // Opcode o tipo de instrucción
+            instr_18_14 = instruction[18:14];  // Campo de registros o desplazamiento
+            instr_13_10 = instruction[13:10];  // Campo de registros o inmediato
+            instr_9_6 = instruction[9:6];      // Campo de registros o inmediato
+            instr_5_2 = instruction[5:2];      // Campo de registros o inmediato
+            instr_1_0 = instruction[1:0];      // Opcodes o bits de control
+        end
+    end
+
+endmodule

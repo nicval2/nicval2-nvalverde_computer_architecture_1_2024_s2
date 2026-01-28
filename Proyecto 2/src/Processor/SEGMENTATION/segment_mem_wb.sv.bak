@@ -1,0 +1,29 @@
+module segment_mem_wb (
+    input logic clk,
+    input logic reset,
+    input logic [20:0] mem_data_in,   // Data from memory
+    input logic [20:0] alu_result_in, // ALU result
+    input logic MemToReg_in,          // Select memory data or ALU result
+    input logic RegWrite_in,          // Control signal for register write
+    output logic [20:0] write_data_out, // Data to write in register
+    output logic MemToReg_out,        // Control signal for memory or ALU select
+    output logic RegWrite_out         // Control signal for register write (output)
+);
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            write_data_out <= 21'b0;
+            RegWrite_out <= 0;
+            MemToReg_out <= 0;
+        end else begin
+            // Select between memory data and ALU result based on MemToReg
+            if (MemToReg_in)
+                write_data_out <= mem_data_in; // Select memory data
+            else
+                write_data_out <= alu_result_in; // Select ALU result
+            
+            RegWrite_out <= RegWrite_in; // Pass RegWrite control signal
+            MemToReg_out <= MemToReg_in; // Pass MemToReg control signal
+        end
+    end
+endmodule
+

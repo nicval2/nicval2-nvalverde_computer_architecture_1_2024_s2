@@ -1,0 +1,24 @@
+module dmem_ram(input logic switchStart, clk, we,
+                input logic [20:0] address, wd,
+                output logic [20:0] rd);
+
+    logic [20:0] dmem_RAM[0:152199];
+    // synthesis translate_off
+    always @(switchStart)
+    $writememh("C:\\Users\yarit\\Downloads\\procesador-pipeline\\procesador-pipeline\\imageoutput.txt", dmem_RAM);
+	// synthesis translate_on
+    always_ff @(posedge clk)
+        begin
+            if (we) 
+                begin
+                    if (address >= 'd0 && address <= 'd152199)
+                        begin
+                        dmem_RAM[address] <= wd;
+                        end
+
+
+                end
+        end
+    assign rd = {21'b0, dmem_RAM[address]};
+
+endmodule
