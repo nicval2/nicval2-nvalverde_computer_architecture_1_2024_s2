@@ -1,72 +1,60 @@
-# Proyectos – Arquitectura de Computadores I (CE4301)
+# Proyecto 3: Alimentador Automático de Animales con Microcontrolador
 
-Este repositorio contiene una colección de proyectos desarrollados como parte del curso  
-**CE4301 – Arquitectura de Computadores I** del Instituto Tecnológico de Costa Rica.  
+## Descripción General del Proyecto
 
-Cada proyecto aborda distintos niveles de abstracción del hardware, desde programación en ensamblador, diseño de arquitecturas personalizadas, hasta la implementación de sistemas embebidos con microcontroladores.
+El sistema consiste en un **alimentador automático** que utiliza **dos sensores ultrasónicos** y **dos servomotores** para controlar el suministro de comida, además de un **buzzer** para alertas sonoras.
 
----
+El funcionamiento general es el siguiente:
+- Un sensor mide la cantidad de comida disponible para la mascota.
+- Si la cantidad es menor a un umbral definido, se activa un servomotor que abre una compuerta durante un corto período de tiempo para dejar caer alimento.
+- Un segundo sensor mide el nivel del contenedor principal de comida.
+- Si el contenedor se encuentra vacío o por debajo de un nivel mínimo, se activa un buzzer de alerta y se acciona un segundo servomotor.
 
-## Proyecto 1 – Histograma de Palabras en Ensamblador
 
-### Descripción
-Este proyecto consiste en la implementación de un programa en **lenguaje ensamblador** que procesa un archivo de texto y genera la frecuencia de aparición de las palabras, con el objetivo de construir un **histograma de las 10 palabras más repetidas**.
+## Componentes del Sistema
 
-El procesamiento del texto se realiza completamente en ensamblador, mientras que el preprocesamiento y la visualización del histograma pueden implementarse en un lenguaje de alto nivel.
-
-### Objetivo
-Comprender el funcionamiento interno de una arquitectura de procesador mediante la programación en ensamblador, optimizando el uso de instrucciones y recursos del sistema.
-
-### Tecnologías y Herramientas
-- ISA: x86 / ARM / RISC-V
-- Lenguaje: Ensamblador
-- Herramientas de simulación y depuración
-- Lenguaje de alto nivel para visualización
-
----
-
-## Proyecto 2 – ASIP para Interpolación Bilineal de Imágenes
-
-### Descripción
-En este proyecto se diseñó e implementó un **Application-Specific Instruction-set Processor (ASIP)** enfocado en la **interpolación bilineal de imágenes en escala de grises**.  
-El ISA fue completamente personalizado y la microarquitectura implementada con **pipelining**.
-
-El sistema permite seleccionar un cuadrante de la imagen de entrada, aplicar interpolación bilineal y mostrar el resultado por VGA, además de medir el desempeño en ciclos por instrucción.
-
-### Objetivo
-Aplicar conceptos avanzados de arquitectura y microarquitectura para demostrar las ventajas de un procesador especializado frente a arquitecturas de propósito general.
-
-### Tecnologías y Herramientas
-- Lenguaje: SystemVerilog
-- Diseño de ISA personalizado
-- Pipelining
-- Simulación y pruebas unitarias
-- FPGA Terasic DE1-SoC
-- VGA, memoria y JTAG
-
----
-
-## Proyecto 3 – Alimentador Automático de Animales con Microcontrolador
-
-### Descripción
-Este proyecto consiste en el diseño e implementación de un **alimentador automático para mascotas**, utilizando un microcontrolador, sensores ultrasónicos, servomotores y un buzzer.
-
-El sistema detecta:
-- Si el plato de la mascota tiene poca comida, dispensando alimento automáticamente.
-- Si el contenedor principal de comida está vacío, activando una alerta sonora y mecánica.
-
-### Objetivo
-Diseñar un sistema embebido funcional que resuelva un problema real, integrando sensores, actuadores y control mediante microcontroladores.
-
-### Tecnologías y Herramientas
 - Microcontrolador
-- Sensores ultrasónicos
-- Servomotores
-- Buzzer
+- 2 Sensores de distancia ultrasónicos
+- 2 Servomotores
+- 1 Buzzer
+- Fuente de alimentación
 - Placa perforada
-- Diseño de hardware y software embebido
+- Estructura física (case)
 
-## Autores
 
-Estudiantes del curso **CE4301 – Arquitectura de Computadores I**  
-Instituto Tecnológico de Costa Rica
+## Funcionamiento del Sistema
+
+### Sensor 1 – Nivel de comida para la mascota
+
+Este sensor se encuentra ubicado en la parte externa del recipiente donde cae la comida. Su función es medir la distancia hasta la superficie del alimento disponible para la mascota.
+
+- Si el nivel de comida es suficiente, el sistema permanece en reposo.
+- Si el nivel de comida es menor a un umbral establecido, se activa el **Servo 1**.
+
+### Servo 1 – Compuerta de dispensado
+
+El **Servo 1** controla una tapa que permite la caída de alimento hacia el recipiente de la mascota.
+
+- El servo gira **90 grados**
+- La compuerta se abre durante aproximadamente **5 milisegundos**
+- Luego regresa a su posición inicial
+
+
+### Sensor 2 – Nivel de comida almacenada
+
+Este sensor se ubica en el contenedor principal donde se almacena la comida.
+
+- Mide qué tan lleno se encuentra el depósito
+- Si el nivel de comida es muy bajo o el contenedor está vacío, se activa una alerta
+
+### Servo 2 y Buzzer – Alerta de contenedor vacío
+
+Cuando el **Sensor 2** detecta que el contenedor de comida está vacío:
+
+- Se activa el **buzzer** como advertencia sonora
+- El **Servo 2** gira **90 grados** como señal visual o mecánica de alerta
+
+
+## Anexo
+![Proyecto3_Arqui](https://github.com/user-attachments/assets/46a9ac48-489f-4162-b324-53c5c46f34b6)
+
