@@ -1,0 +1,15 @@
+module dmem_rom (input logic [20:0] address,
+				output logic [20:0] rd);
+	
+	logic [20:0] dmem_ROM[0:2424299];
+	
+	initial
+	
+		// Data meant to be read
+
+		$readmemh("C:\\Users\\yarit\\Downloads\\procesador-pipeline\\procesador-pipeline\\imageoutput.txt", dmem_ROM);
+		
+		
+	assign rd = dmem_ROM[address[20:0]];
+	
+endmodule

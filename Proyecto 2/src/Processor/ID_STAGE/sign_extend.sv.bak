@@ -1,0 +1,21 @@
+module sign_extend (
+    input [11:0] num_in,   // Inmediato de 12 bits según la green card
+    input [1:0] imm_src,   // Selección de inmediato
+    output reg [20:0] num_out  // Salida extendida a 21 bits
+);
+
+    always_comb
+        case (imm_src)
+            // 12-bit unsigned immediate (instrucciones como LOAD, STORE)
+            2'b00: num_out = {9'b0, num_in};  // Extensión de 12 bits a 21 bits sin signo
+            
+            // 8-bit unsigned immediate (instrucciones aritméticas con inmediato)
+            2'b01: num_out = {13'b0, num_in[7:0]}; // Extensión de 8 bits a 21 bits sin signo
+            
+            // 12-bit two's complement for branches
+            2'b10: num_out = {{9{num_in[11]}}, num_in};  // Extensión de 12 bits a 21 bits con signo (extensión del bit más significativo)
+            
+            default: num_out = 21'bx;  // Valor indefinido en caso de fuente de inmediato no válida
+        endcase
+
+endmodule

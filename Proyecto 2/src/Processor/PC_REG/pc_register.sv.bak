@@ -1,0 +1,17 @@
+module pc_register (
+    input clk,             // Reloj del sistema
+    input rst,             // Reset del sistema
+    input [20:0] pc_in,    // Nueva dirección (21 bits)
+    input pc_write,        // Señal de habilitación de escritura
+    output reg [20:0] pc_out // Dirección de salida (21 bits)
+);
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            pc_out <= 21'd0;      // Reset: PC a 0
+        end else if (pc_write) begin
+            pc_out <= pc_in;      // Actualiza el PC si pc_write está habilitado
+        end
+    end
+
+endmodule

@@ -1,0 +1,31 @@
+module adder_tb ();
+    
+    logic clk;
+    logic [20:0] A, B;
+    logic [20:0] C;
+    
+    adder adder_TB (A, B, C);
+    
+    initial begin
+        
+        clk = 0; #2;
+        
+        // Adder, test 1:
+        A = 21'b100000000000000000000; 
+        B = 21'b100000000000000000001; #2;
+        
+        // Adder, test 2:
+        A = 21'b100000000000000000010; 
+        B = 21'b100000000000000000001; #2;
+        
+        // Adder, test 3:
+        A = 21'b111111111111111111111; 
+        B = 21'b000000000000000000001; #2;
+        
+    end
+    
+    always begin
+        clk = !clk; #1;
+    end
+    
+endmodule

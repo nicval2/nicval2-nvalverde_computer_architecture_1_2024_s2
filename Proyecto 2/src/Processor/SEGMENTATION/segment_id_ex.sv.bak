@@ -1,0 +1,49 @@
+module segment_id_ex (
+    input logic clk, rst,
+    input logic MemToReg_in, MemRead_in, MemWrite_in,    // Señales de control
+    input logic [4:0] ALUOp_in,//input logic [2:0] ALUOp_in,                         // Operación de la ALU
+    input logic ALUSrc_in, RegWrite_in,                 // Señales de la ALU y escritura en registro
+    input logic [20:0] pc_in, RD1_in, RD2_in, RD3_in,   // Datos de PC y registros
+    input logic [3:0] RR3_in,                           // Registro de destino (4 bits)
+    input logic [20:0] num_in,                          // Inmediato extendido
+    output logic MemToReg_out, MemRead_out, MemWrite_out, // Señales de control
+    output logic [4:0] ALUOp_out,//output logic [2:0] ALUOp_out,                       // Operación de la ALU
+    output logic ALUSrc_out, RegWrite_out,              // Señales de la ALU y escritura en registro
+    output logic [20:0] pc_out, RD1_out, RD2_out, RD3_out, // Datos de PC y registros
+    output logic [3:0] RR3_out,                         // Registro de destino
+    output logic [20:0] num_out                         // Inmediato extendido
+);
+
+    always_ff @(negedge clk or posedge rst) begin
+        if (rst) begin
+            // Reset de todas las señales
+            MemToReg_out = 0;
+            MemRead_out = 0;
+            MemWrite_out = 0;
+            ALUOp_out = 0;
+            ALUSrc_out = 0;
+            RegWrite_out = 0;
+            pc_out = 21'd0;
+            RD1_out = 21'd0;
+            RD2_out = 21'd0;
+            RD3_out = 21'd0;
+            RR3_out = 4'd0;
+            num_out = 21'd0;
+        end else begin
+            // Transferir señales y datos entre etapas
+            MemToReg_out = MemToReg_in;
+            MemRead_out = MemRead_in;
+            MemWrite_out = MemWrite_in;
+            ALUOp_out = ALUOp_in;
+            ALUSrc_out = ALUSrc_in;
+            RegWrite_out = RegWrite_in;
+            pc_out = pc_in;
+            RD1_out = RD1_in;
+            RD2_out = RD2_in;
+            RD3_out = RD3_in;
+            RR3_out = RR3_in;
+            num_out = num_in;
+        end
+    end
+
+endmodule

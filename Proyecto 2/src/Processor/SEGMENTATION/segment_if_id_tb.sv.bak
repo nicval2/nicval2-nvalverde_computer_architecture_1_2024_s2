@@ -1,0 +1,71 @@
+`timescale 1ns / 1ps
+
+module segment_if_id_tb();
+
+    reg clk, rst;
+    reg [20:0] pc_out;
+    reg [20:0] instruction;
+    wire [20:0] pc;
+    wire [4:0] opcode;
+    wire [3:0] instr_16_12;
+    wire [3:0] instr_11_8;
+    wire [3:0] instr_7_4;
+    wire [3:0] instr_3_0;
+
+    // Instancia del módulo a probar
+    segment_if_id uut (
+        .clk(clk),
+        .rst(rst),
+        .pc_out(pc_out),
+        .instruction(instruction),
+        .pc(pc),
+        .opcode(opcode),
+        .instr_16_12(instr_16_12),
+        .instr_11_8(instr_11_8),
+        .instr_7_4(instr_7_4),
+        .instr_3_0(instr_3_0)
+    );
+
+    // Generar el reloj
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;  // Periodo de reloj = 10ns
+    end
+
+    initial begin
+        // Inicialización de las señales
+        rst = 1;
+        pc_out = 21'd0;
+        instruction = 21'd0;
+        #10; // Tiempo para estabilizar el reset
+
+        rst = 0;
+        #10; // Espera después de reset para estabilizar el sistema
+
+        pc_out = 21'd100;
+        instruction = 21'b110110110110110110110; // Otra instrucción de prueba
+        #10; // Espera para que los cambios tomen efecto
+
+        $display("Test 1 - PC: %d, Opcode: %b, instr_16_12: %b, instr_11_8: %b, instr_7_4: %b, instr_3_0: %b", 
+                 pc, opcode, instr_16_12, instr_11_8, instr_7_4, instr_3_0);
+
+        pc_out = 21'd200;
+        instruction = 21'b101010101010101010101; // Instrucción de prueba
+        #10; // Espera para que los cambios tomen efecto
+
+        $display("Test 2 - PC: %d, Opcode: %b, instr_16_12: %b, instr_11_8: %b, instr_7_4: %b, instr_3_0: %b", 
+                 pc, opcode, instr_16_12, instr_11_8, instr_7_4, instr_3_0);
+
+        // Reinicio para limpiar todo
+        rst = 1;
+        #10; // Tiempo para que el reset tome efecto
+
+        $display("Test 3 - Reset activado: PC: %d, Opcode: %b, instr_16_12: %b, instr_11_8: %b, instr_7_4: %b, instr_3_0: %b", 
+                 pc, opcode, instr_16_12, instr_11_8, instr_7_4, instr_3_0);
+
+        $finish;  // Terminar la simulación
+    end
+
+endmodule
+
+endmodule

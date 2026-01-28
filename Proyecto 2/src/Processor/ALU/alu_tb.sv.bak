@@ -1,0 +1,61 @@
+`timescale 1ns / 1ps
+
+module alu_tb;
+
+    // Declarar las entradas como regs y las salidas como wires
+    reg [20:0] A, B;
+    reg [4:0] sel;
+    wire [20:0] C;
+    wire flagZ;
+    
+    // Instanciar el módulo de la ALU
+    alu uut (
+        .A(A),
+        .B(B),
+        .sel(sel),
+        .C(C),
+        .flagZ(flagZ)
+    );
+    
+    // Inicializar las señales y aplicar estímulos
+    initial begin
+        // Caso 1: Suma (opcode: 00011)
+        A = 21'd50;
+        B = 21'd25;
+        sel = 5'b00011;   // Suma
+        #10;              // Esperar 10 unidades de tiempo
+        $display("Suma: A = %d, B = %d, Resultado = %d, Zero Flag = %b", A, B, C, flagZ);
+        
+        // Caso 2: Resta (opcode: 00101)
+        A = 21'd50;
+        B = 21'd25;
+        sel = 5'b00101;   // Resta
+        #10;
+        $display("Resta: A = %d, B = %d, Resultado = %d, Zero Flag = %b", A, B, C, flagZ);
+        
+        // Caso 3: Multiplicación (opcode: 01001)
+        A = 21'd5;
+        B = 21'd4;
+        sel = 5'b01001;   // Multiplicación
+        #10;
+        $display("Multiplicación: A = %d, B = %d, Resultado = %d, Zero Flag = %b", A, B, C, flagZ);
+        
+        // Caso 4: División (opcode: 01010)
+        A = 21'd20;
+        B = 21'd4;
+        sel = 5'b01010;   // División
+        #10;
+        $display("División: A = %d, B = %d, Resultado = %d, Zero Flag = %b", A, B, C, flagZ);
+        
+        // Caso 5: Suma con resultado 0 (para probar la bandera Zero)
+        A = 21'd25;
+        B = 21'd-25;
+        sel = 5'b00011;   // Suma que da 0
+        #10;
+        $display("Suma (Zero): A = %d, B = %d, Resultado = %d, Zero Flag = %b", A, B, C, flagZ);
+        
+        // Terminar la simulación
+        $finish;
+    end
+    
+endmodule
