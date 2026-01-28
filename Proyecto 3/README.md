@@ -56,4 +56,5 @@ Cuando el **Sensor 2** detecta que el contenedor de comida está vacío:
 
 
 ## Anexo
+![Proyecto3_Arqui](https://github.com/user-attachments/assets/46a9ac48-489f-4162-b324-53c5c46f34b6)
 
