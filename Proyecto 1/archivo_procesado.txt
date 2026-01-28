@@ -1,0 +1,10 @@
+hola 5
+mundo 3
+ejemplo 3
+texto 2
+este 10
+es 22
+un 1
+para 15
+el 12
+programa 19
