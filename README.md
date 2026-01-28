@@ -1,0 +1,2 @@
+# nicval2-nvalverde_computer_architecture_1_2024_s2
+Proyectos del curso Arquitectura en Computadores
