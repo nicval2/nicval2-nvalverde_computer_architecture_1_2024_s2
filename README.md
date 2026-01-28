@@ -65,8 +65,3 @@ Diseñar un sistema embebido funcional que resuelva un problema real, integrando
 - Buzzer
 - Placa perforada
 - Diseño de hardware y software embebido
-
-## Autores
-
-Estudiantes del curso **CE4301 – Arquitectura de Computadores I**  
-Instituto Tecnológico de Costa Rica
